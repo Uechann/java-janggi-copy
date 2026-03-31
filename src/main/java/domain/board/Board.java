@@ -39,10 +39,11 @@ public class Board {
 
         validateMoveBySide(side, fromPiece, toPiece);
 
-        if (fromPiece.canMove(adjustStateBySide(side), adjustPositionBySide(side, from), adjustPositionBySide(side, to))) {
-            state.put(to, fromPiece);
-            state.remove(from);
+        if (!fromPiece.canMove(adjustStateBySide(side), adjustPositionBySide(side, from), adjustPositionBySide(side, to))) {
+            throw new IllegalArgumentException("이동할 수 없습니다.");
         }
+        state.put(to, fromPiece);
+        state.remove(from);
     }
 
     public void placePieces(Side side, Placement placement) {
