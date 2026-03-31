@@ -13,6 +13,13 @@ dependencies {
     testImplementation platform('org.assertj:assertj-bom:3.27.3')
     testImplementation('org.junit.jupiter:junit-jupiter')
     testImplementation('org.assertj:assertj-core')
+    testImplementation('io.cucumber:cucumber-java:7.15.0')
+    testImplementation('io.cucumber:cucumber-junit-platform-engine:7.15.0')
+    testImplementation 'org.junit.platform:junit-platform-suite:1.10.0'
+
+    testImplementation 'net.java.dev.jna:jna:5.13.0'
+    testImplementation 'net.java.dev.jna:jna-platform:5.13.0'
+
 }
 
 java {
